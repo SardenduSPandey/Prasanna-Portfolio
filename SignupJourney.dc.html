@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{margin:0;background:#0A0A0B;color:#EDEBE5;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:#A78BFA;color:#0A0A0B;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.3;transform:scale(.7);}}
+</style>
+</helmet>
+
+<div style="position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.05;mix-blend-mode:overlay;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+<!-- NAV -->
+<nav id="siteNav" style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,64px);background:transparent;border-bottom:1px solid transparent;transition:background .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;">
+  <a href="Portfolio.dc.html" style="text-decoration:none;color:#EDEBE5;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;" style-hover="opacity:0.8;"><span style="font-size:17px;">←</span> Back to portfolio</a>
+  <a href="Portfolio.dc.html#work" style="text-decoration:none;color:#9A9A92;font-size:13px;letter-spacing:0.04em;font-weight:500;" style-hover="color:#EDEBE5;">All work</a>
+</nav>
+
+<!-- ============ COVER BANNER ============ -->
+<section data-screen-label="Cover" style="padding:clamp(96px,13vh,150px) clamp(16px,4vw,56px) clamp(28px,5vh,56px);">
+  <div style="max-width:1240px;margin:0 auto;border-radius:clamp(14px,1.6vw,20px);overflow:hidden;border:1px solid rgba(167,139,250,0.18);box-shadow:0 30px 80px rgba(0,0,0,0.5);aspect-ratio:16/4.5;">
+    <img src="assets/sj-cover.png" alt="Signup Journey — case study cover" style="width:100%;height:100%;object-fit:cover;object-position:center 50%;display:block;">
+  </div>
+</section>
+
+<!-- ============ HERO ============ -->
+<header data-screen-label="Case study hero" style="position:relative;max-width:1180px;margin:0 auto;padding:clamp(28px,5vh,60px) clamp(20px,5vw,48px) clamp(40px,6vh,72px);">
+  <div aria-hidden="true" style="position:absolute;top:0;left:calc(-50vw + 50%);width:100vw;height:100%;overflow:hidden;z-index:0;pointer-events:none;">
+    <div style="position:absolute;inset:0;background:radial-gradient(125% 100% at 78% 28%,rgba(139,92,246,0.40) 0%,rgba(109,40,217,0.16) 36%,rgba(109,40,217,0) 64%);"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(58% 55% at 14% 100%,rgba(167,139,250,0.14) 0%,rgba(167,139,250,0) 55%);"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);-webkit-mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0A0A0B 0%,rgba(10,10,11,0) 14%,rgba(10,10,11,0) 58%,#0A0A0B 100%);"></div>
+  </div>
+  <div style="position:relative;z-index:1;">
+  <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:16px;margin-bottom:30px;">
+    <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:#6D28D9;padding:7px 14px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:#fff;display:inline-block;animation:pulseDot 2.4s ease-in-out infinite;"></span>Case study</span>
+    <span style="height:1px;width:36px;background:rgba(255,255,255,0.2);"></span>
+    <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#85857C;font-weight:600;">Outfox Energy · UK Utility · Live &amp; Deployed</span>
+  </div>
+  <h1 data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.8rem,7vw,6rem);letter-spacing:-0.02em;line-height:1.0;">Designing an energy <em style="font-style:italic;color:#A78BFA;">signup journey</em> from scratch, quote to confirmed switch</h1>
+  <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;margin:30px 0 0;max-width:60ch;font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.55;color:#C4C4BC;">Full redesign of Outfox Energy's digital signup flow. Wireframes, user flows, and final UI shipped to production and approved by the client.</p>
+
+  <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .18s,transform .9s cubic-bezier(.22,.61,.36,1) .18s;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;margin-top:48px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;">
+    <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">My role</div><div style="font-size:15px;font-weight:600;">Wireframes · UI Design</div></div>
+    <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">Type</div><div style="font-size:15px;font-weight:600;">Client Project</div></div>
+    <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">Deliverable</div><div style="font-size:15px;font-weight:600;">Live product</div></div>
+    <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">Industry</div><div style="font-size:15px;font-weight:600;">Energy / Utilities (UK)</div></div>
+  </div>
+  </div>
+
+</header>
+
+<!-- ============ THE CHALLENGE ============ -->
+<section data-screen-label="Challenge" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(20px,5vw,48px);">
+  <div style="display:grid;grid-template-columns:0.42fr 0.58fr;gap:clamp(32px,6vw,80px);align-items:start;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#A78BFA;font-weight:700;">The challenge</span>
+      <h2 style="margin:18px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-0.01em;line-height:1.08;">A legally complex journey hiding behind a confusing interface</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;">
+      <p style="margin:0;font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:#C4C4BC;">Outfox Energy needed a seamless onboarding experience for users exploring tariffs, comparing plans, and switching providers. The existing flow had significant usability gaps — dense forms, unclear pricing, and weak trust signals caused high abandonment.</p>
+      <div style="margin-top:32px;border-left:2px solid #6D28D9;background:linear-gradient(120deg,rgba(109,40,217,0.12),rgba(109,40,217,0.02));border-radius:0 16px 16px 0;padding:26px 30px;">
+        <p style="margin:0;font-size:clamp(1.2rem,1.8vw,1.5rem);line-height:1.4;color:#EDEBE5;">"The challenge was to simplify a legally complex utility signup journey without removing critical compliance information."</p>
+        <div style="margin-top:16px;font-size:13px;color:#85857C;">Design brief, Outfox Energy project</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MY ROLE ============ -->
+<section style="background:#0C0C0D;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);display:grid;grid-template-columns:0.55fr 0.45fr;gap:clamp(32px,6vw,72px);align-items:center;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#A78BFA;font-weight:700;">My role on this project</span>
+      <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4vw,3rem);letter-spacing:-0.01em;line-height:1.08;">Wireframes, user flows &amp; final UI</h2>
+      <p style="margin:24px 0 0;font-size:clamp(1rem,1.25vw,1.1rem);line-height:1.65;color:#9C9C94;">I was responsible for two key phases of this project. First, I mapped and wireframed the entire user flow, defining the 5-step structure, the information architecture of each screen, and how trust signals would be sequenced across the journey.</p>
+      <p style="margin:16px 0 0;font-size:clamp(1rem,1.25vw,1.1rem);line-height:1.65;color:#9C9C94;">Then I took those wireframes through to final UI, translating the structural decisions into a polished, production-ready visual design that aligned with Outfox's brand while meeting the usability requirements established in the flow phase.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:28px;">
+        <span style="font-size:13px;color:#A78BFA;border:1px solid rgba(167,139,250,0.35);padding:8px 16px;border-radius:100px;">User Flow Design</span>
+        <span style="font-size:13px;color:#A78BFA;border:1px solid rgba(167,139,250,0.35);padding:8px 16px;border-radius:100px;">Wireframing</span>
+        <span style="font-size:13px;color:#A78BFA;border:1px solid rgba(167,139,250,0.35);padding:8px 16px;border-radius:100px;">UI Design</span>
+        <span style="font-size:13px;color:#A78BFA;border:1px solid rgba(167,139,250,0.35);padding:8px 16px;border-radius:100px;">Interaction Design</span>
+        <span style="font-size:13px;color:#A78BFA;border:1px solid rgba(167,139,250,0.35);padding:8px 16px;border-radius:100px;">Conversion Optimisation</span>
+      </div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;align-items:center;gap:20px;background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:20px 26px;"><span style="font-family:'Instrument Serif',serif;font-size:2.6rem;line-height:1;color:#A78BFA;min-width:46px;">6</span><span style="font-size:15px;color:#C4C4BC;line-height:1.4;">Screens wireframed and taken to final UI</span></div>
+      <div style="display:flex;align-items:center;gap:20px;background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:20px 26px;"><span style="font-family:'Instrument Serif',serif;font-size:2.6rem;line-height:1;color:#A78BFA;min-width:46px;">5</span><span style="font-size:15px;color:#C4C4BC;line-height:1.4;">Distinct user journey stages designed from scratch</span></div>
+      <div style="display:flex;align-items:center;gap:20px;background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:20px 26px;"><span style="font-family:'Instrument Serif',serif;font-size:2.6rem;line-height:1;color:#A78BFA;min-width:46px;">2</span><span style="font-size:15px;color:#C4C4BC;line-height:1.4;">Phases — wireframes first, UI second</span></div>
+      <div style="display:flex;align-items:center;gap:20px;background:linear-gradient(120deg,rgba(109,40,217,0.18),rgba(109,40,217,0.04));border:1px solid rgba(167,139,250,0.3);border-radius:16px;padding:20px 26px;"><span style="font-size:2rem;line-height:1;color:#A78BFA;min-width:46px;text-align:center;">✓</span><span style="font-size:15px;color:#EDEBE5;font-weight:500;line-height:1.4;">Client signed off and shipped to production</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USER JOURNEY ============ -->
+<section data-screen-label="User journey" style="max-width:1180px;margin:0 auto;padding:clamp(64px,10vh,130px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);max-width:760px;">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#A78BFA;font-weight:700;">User journey</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-0.01em;line-height:1.05;">5 steps designed to feel like 2</h2>
+    <p style="margin:20px 0 0;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:#9C9C94;">The structural decision I made early was to keep the journey to 5 screens but design each one to feel lightweight. Progress should feel inevitable, not laborious.</p>
+  </div>
+
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,1.5vw,20px);margin-top:clamp(48px,7vh,80px);position:relative;">
+    <div style="position:absolute;top:28px;left:10%;right:10%;height:1px;background:rgba(167,139,250,0.25);z-index:0;"></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <span style="width:56px;height:56px;border-radius:50%;background:#6D28D9;color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;box-shadow:0 0 0 6px rgba(109,40,217,0.12);">01</span>
+      <div style="margin-top:18px;font-size:15px;font-weight:700;">Quote tool</div>
+      <div style="margin-top:8px;font-size:14px;color:#9C9C94;line-height:1.45;">Postcode + usage → personalised tariff</div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">02</span>
+      <div style="margin-top:18px;font-size:15px;font-weight:700;">Tariff selection</div>
+      <div style="margin-top:8px;font-size:14px;color:#9C9C94;line-height:1.45;">Fixed, Smart or Variable</div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">03</span>
+      <div style="margin-top:18px;font-size:15px;font-weight:700;">Your details</div>
+      <div style="margin-top:8px;font-size:14px;color:#9C9C94;line-height:1.45;">Personal info, address, supply date</div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">04</span>
+      <div style="margin-top:18px;font-size:15px;font-weight:700;">Payment</div>
+      <div style="margin-top:8px;font-size:14px;color:#9C9C94;line-height:1.45;">Direct Debit — transparent first</div>
+    </div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;">
+      <span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;">05</span>
+      <div style="margin-top:18px;font-size:15px;font-weight:700;">Review &amp; confirm</div>
+      <div style="margin-top:8px;font-size:14px;color:#9C9C94;line-height:1.45;">Full summary before Switch Now</div>
+    </div>
+  </div>
+
+  <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .2s,transform .9s cubic-bezier(.22,.61,.36,1) .2s;display:flex;justify-content:center;margin-top:48px;">
+    <span style="display:inline-flex;align-items:center;gap:10px;background:rgba(34,197,94,0.12);border:1px solid rgba(34,197,94,0.3);color:#4ADE80;font-size:14px;font-weight:600;padding:11px 22px;border-radius:100px;"><span style="width:18px;height:18px;border-radius:50%;background:#22C55E;color:#0A0A0B;display:flex;align-items:center;justify-content:center;font-size:11px;">✓</span>Switch confirmed — welcome email sent</span>
+  </div>
+</section>
+
+<!-- ============ SCREEN WALKTHROUGH INTRO ============ -->
+<section style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,48px) clamp(20px,3vh,40px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);border-top:1px solid rgba(255,255,255,0.1);padding-top:clamp(40px,6vh,64px);">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#A78BFA;font-weight:700;">Screen walkthrough</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.4rem,5.5vw,4rem);letter-spacing:-0.01em;line-height:1.02;">What each screen does well</h2>
+    <p style="margin:18px 0 0;max-width:54ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:#9C9C94;">A screen-by-screen look at the design decisions, trust signals, and UX thinking behind each step of the live journey.</p>
+  </div>
+</section>
+
+<!-- 01 QUOTE TOOL -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">01</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Quote tool — the entry point</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">Users specify energy type, location and usage to generate personalised tariff quotes. This screen sets the tone for the entire journey.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-quote-tool.png" alt="Quote tool screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Progressive disclosure</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Energy type selection is presented first as a simple toggle, before asking for location. Chunking decisions this way reduces initial cognitive load and keeps the tool feeling approachable rather than form-heavy.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Trust signal placement</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The Trustpilot 4.7 rating sits just below the CTA — precisely where hesitant users look before committing. At nearly 48,000 reviews this is one of the strongest social proof assets in the UK energy sector.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Address lookup UX</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The "Select your address (18 available)" dropdown confirms the postcode has been recognized and gives users control over the exact address, preventing supply-to-wrong-address errors downstream.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 TARIFF SELECTION -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">02</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Tariff selection — the decision moment</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">Users choose between Fixed, Smart and Variable plans. The most cognitively demanding screen in the journey.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-tariff.png" alt="Tariff selection screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">"Best value" anchoring</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The recommended tariff is visually elevated with a badge and heavier border. This anchoring technique reduces decision paralysis without forcing the user's hand, a deliberate wireframe decision carried through to final UI.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Consistent card structure</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Every tariff card follows the same layout, price, feature ticks, Select CTA. Consistency lets users scan and compare plans without re-learning the layout on each card.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Variable tariff transparency</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">"Fox Standard Dual" is listed separately and honestly describes following the Ofgem Price Cap. This transparency builds long-term brand trust even where it doesn't maximize short-term conversion.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 YOUR DETAILS -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">03</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Your details — building the account</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">Collects personal info, supply date, homeowner status, EV/solar ownership and Priority Services eligibility.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-details.png" alt="Your details screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Tariff persistence</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The selected tariff summary card stays anchored at the top throughout the form. This was a deliberate wireframe decision, users filling in personal details need a constant reminder of what they're signing up for.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Flexible supply start date</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Offering a suggested date alongside a "let me pick" option gives users control over the transition, particularly important for users mid-contract who need to time the switch carefully.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">14-day cooling off — placed deliberately</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The cancellation policy is surfaced right alongside the supply start date, exactly when commitment anxiety peaks. Placing it here reduces hesitation at the critical moment rather than burying it in T&amp;Cs.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 PAYMENT -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">04</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Payment — Direct Debit setup</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">The highest-trust moment in the journey. Bank details collected via Direct Debit with full schedule transparency shown upfront.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-payment.png" alt="Payment screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Payment schedule upfront</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">First payment date, amount, subsequent date and amount are all shown before the user enters a single bank detail. This was the key UI decision on this screen, transparency before the ask.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Direct Debit guarantee</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The DD logo and Guarantee link are prominently displayed, a well-understood consumer protection signal in the UK that meaningfully reduces anxiety around automated payments.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Explicit account holder confirmation</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Presenting the "I am the account holder" step as a clear declaration, not buried in T&amp;Cs — makes users feel in control and properly informed at the most legally significant step.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 REVIEW & CONFIRM -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">05</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Review &amp; confirm — the final commitment</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">Complete summary of tariff, payment schedule, supply references and unit rates before the Switch Now CTA.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-review.png" alt="Review &amp; confirm screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Complete information summary</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Everything surfaces here, tariff name, Direct Debit schedule, meter type, MPAN/MPRN references, unit rates and standing charges. Pre-commit transparency is both good UX and required by Ofgem standards.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Annual cost visibility</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Both estimated monthly (£150) and yearly (£1,550) figures are shown, giving users the mental model of their full annual commitment before they press Switch Now.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">14-day reminder at point of commitment</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The cooling-off period is restated just above the Switch Now button, the highest-anxiety moment. This last-mile reassurance was a conscious design decision to remove the final psychological barrier.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 SUCCESS -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px) clamp(64px,10vh,120px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2.4rem,4vw,3.2rem);color:rgba(167,139,250,0.4);line-height:0.8;">06</span><h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.3rem);letter-spacing:-0.01em;">Success — a warm welcome</h3></div>
+    <p style="margin:0 0 clamp(32px,5vh,52px);max-width:64ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">The journey is complete. This screen reinforces the user's decision and sets clear expectations for what happens next.</p>
+    <div style="max-width:940px;margin:0 auto;position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <div style="display:flex;align-items:center;gap:7px;padding:13px 18px;background:#6D28D9;"><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.85);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.45);"></span><span style="width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,0.25);"></span><span style="margin-left:14px;flex:1;max-width:280px;height:24px;border-radius:6px;background:rgba(255,255,255,0.15);display:flex;align-items:center;padding:0 12px;font-size:12px;color:rgba(255,255,255,0.85);">outfox.energy</span></div>
+      <img src="assets/sj-success.png" alt="Success screen" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 clamp(28px,4vw,56px);margin-top:clamp(40px,6vh,64px);">
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Brand mascot moment</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The Outfox fox mascot appears for the first time on the success screen, a warm, playful touch that makes the confirmation feel like a genuine milestone rather than just a system receipt.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Clear "what's next" framing</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Rather than ending with a generic thank you, the screen immediately addresses the user's next concern: welcome pack via email. Proactive framing reduces post-signup anxiety.</p></div>
+      <div style="padding:20px 0 0;border-top:2px solid rgba(167,139,250,0.4);"><div style="font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#A78BFA;font-weight:700;margin-bottom:10px;">Community language</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">"You're now part of a community who enjoys some of the most competitive tariffs" frames signup as joining something, not just buying something. A deliberate tone choice to build loyalty from day one.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OUTCOME ============ -->
+<section data-screen-label="Outcome" style="background:#070708;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#85857C;font-weight:600;">— Outcome</span>
+      <h2 style="margin:18px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-0.01em;line-height:1.05;">Shipped, live, and approved by the client</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;display:grid;grid-template-columns:1.3fr 0.85fr 0.85fr;gap:1px;margin-top:clamp(40px,6vh,64px);background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:20px;overflow:hidden;">
+      <div style="background:#0E0E10;padding:clamp(28px,3.5vw,44px);"><p style="margin:0;font-family:'Instrument Serif',serif;font-style:italic;font-size:clamp(1.2rem,1.8vw,1.5rem);line-height:1.4;color:#E8E6DF;">"The signup flow is clean, clear, and exactly what we needed. Users can get from quote to confirmed switch without any friction — the team is thrilled with how it came out."</p><div style="margin-top:20px;font-size:13px;color:#85857C;">— Client feedback, Outfox Energy</div></div>
+      <div style="background:#0E0E10;padding:clamp(28px,3.5vw,44px);"><div style="font-family:'Instrument Serif',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#A78BFA;">4.7<span style="font-size:0.6em;">★</span></div><p style="margin:16px 0 0;font-size:0.95rem;line-height:1.55;color:#9C9C94;">Trustpilot score from 47,946 reviews — well above the 4.0 sector average for UK energy suppliers</p></div>
+      <div style="background:#0E0E10;padding:clamp(28px,3.5vw,44px);"><div style="font-family:'Instrument Serif',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1;color:#A78BFA;">Live</div><p style="margin:16px 0 0;font-size:0.95rem;line-height:1.55;color:#9C9C94;">All 6 screens in production — from quote tool to success confirmation — shipped exactly as designed</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MOBILE VIEW ============ -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,110px) clamp(20px,5vw,48px);">
+  <h2 data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);margin:0 0 clamp(40px,6vh,64px);font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-0.01em;">Mobile view for signup journey flow</h2>
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(10px,1.4vw,18px);align-items:start;">
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-quote.png" alt="Quote — mobile" style="width:100%;height:auto;display:block;"></div>
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-tariff.png" alt="Tariffs — mobile" style="width:100%;height:auto;display:block;"></div>
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-details.png" alt="Details — mobile" style="width:100%;height:auto;display:block;"></div>
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-payment.png" alt="Payment — mobile" style="width:100%;height:auto;display:block;"></div>
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-review.png" alt="Review — mobile" style="width:100%;height:auto;display:block;"></div>
+    <div style="border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 24px 60px rgba(0,0,0,0.45);background:#fff;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;" style-hover="transform:translateY(-6px);border-color:rgba(167,139,250,0.5);"><img src="assets/sj-m-success.png" alt="Success — mobile" style="width:100%;height:auto;display:block;"></div>
+  </div>
+  <p data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .16s,transform .9s cubic-bezier(.22,.61,.36,1) .16s;margin:26px 0 0;text-align:center;font-size:13px;color:#6E6E66;">The full five-step journey, responsive across mobile from quote to confirmed switch.</p>
+</section>
+
+<!-- ============ FINAL QUOTE ============ -->
+<section style="border-top:1px solid rgba(255,255,255,0.07);background:linear-gradient(160deg,rgba(109,40,217,0.16),rgba(109,40,217,0.03));">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(72px,12vh,150px) clamp(20px,5vw,48px);text-align:center;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);">
+      <span style="display:block;width:54px;height:1px;background:rgba(167,139,250,0.6);margin:0 auto 32px;"></span>
+      <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:500;font-size:clamp(1.45rem,3vw,2.4rem);line-height:1.4;letter-spacing:-0.015em;color:#EDEBE5;">"Designing the Outfox Energy signup journey taught me how to simplify a highly regulated, information-heavy experience into a structured, trust-driven onboarding flow and that the best UX work is invisible to the people it helps."</p>
+      <div style="margin-top:32px;font-size:14px;letter-spacing:0.04em;color:#A78BFA;">— Lead UI/UX Designer, Outfox Energy Project</div>
+      <a href="Portfolio.dc.html#work" style="display:inline-flex;align-items:center;gap:10px;margin-top:44px;text-decoration:none;color:#fff;background:#6D28D9;font-size:15px;font-weight:600;padding:14px 28px;border-radius:100px;transition:opacity .25s ease,transform .25s ease;" style-hover="opacity:0.88;transform:translateY(-2px);"><span style="font-size:17px;">←</span> Back to all work</a>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    this._nav = document.getElementById('siteNav');
+    this._ticking = false;
+    this._onScroll = () => {
+      if (!this._ticking) {
+        requestAnimationFrame(() => { this.handleScroll(); this._ticking = false; });
+        this._ticking = true;
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    this.handleScroll();
+    this._t1 = setTimeout(() => this.handleScroll(), 120);
+    this._t2 = setTimeout(() => this.handleScroll(), 500);
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    clearTimeout(this._t1); clearTimeout(this._t2);
+  }
+  scrollTop() {
+    return window.scrollY || window.pageYOffset ||
+      (document.scrollingElement ? document.scrollingElement.scrollTop : 0) || 0;
+  }
+  handleScroll() {
+    const y = this.scrollTop();
+    const vh = window.innerHeight || 800;
+    if (this._nav) {
+      if (y > 60) {
+        this._nav.style.background = 'rgba(10,10,11,0.92)';
+        this._nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+      } else {
+        this._nav.style.background = 'transparent';
+        this._nav.style.borderBottomColor = 'transparent';
+      }
+    }
+    if (this._reveals && this._reveals.length) {
+      const trigger = vh * 0.92;
+      const still = [];
+      for (const el of this._reveals) {
+        if (el.getBoundingClientRect().top < trigger) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        } else still.push(el);
+      }
+      this._reveals = still;
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

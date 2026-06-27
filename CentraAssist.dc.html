@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{margin:0;background:#0A0A0B;color:#EDEBE5;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:#5EEAD4;color:#0A0A0B;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.3;transform:scale(.7);}}
+</style>
+</helmet>
+
+<div style="position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.05;mix-blend-mode:overlay;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+<!-- NAV -->
+<nav id="siteNav" style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,64px);background:transparent;border-bottom:1px solid transparent;transition:background .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;">
+  <a href="Portfolio.dc.html" style="text-decoration:none;color:#EDEBE5;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;" style-hover="opacity:0.8;"><span style="font-size:17px;">←</span> Back to portfolio</a>
+  <a href="Portfolio.dc.html#work" style="text-decoration:none;color:#9A9A92;font-size:13px;letter-spacing:0.04em;font-weight:500;" style-hover="color:#EDEBE5;">All work</a>
+</nav>
+
+<!-- COVER BANNER -->
+<section data-screen-label="Cover" style="padding:clamp(96px,13vh,150px) clamp(16px,4vw,56px) clamp(28px,5vh,56px);">
+  <div style="max-width:1240px;margin:0 auto;border-radius:clamp(14px,1.6vw,20px);overflow:hidden;border:1px solid rgba(94,234,212,0.18);aspect-ratio:16/4.5;"><img src="assets/ca-cover.png" alt="CentraAssist cover" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+</section>
+
+<!-- HERO -->
+<header data-screen-label="Case study hero" style="position:relative;max-width:1180px;margin:0 auto;padding:clamp(28px,5vh,60px) clamp(20px,5vw,48px) clamp(40px,6vh,72px);">
+  <div aria-hidden="true" style="position:absolute;top:0;left:calc(-50vw + 50%);width:100vw;height:100%;overflow:hidden;z-index:0;pointer-events:none;">
+    <div style="position:absolute;inset:0;background:radial-gradient(125% 100% at 78% 28%,rgba(45,212,191,0.34) 0%,rgba(20,184,166,0.14) 36%,rgba(20,184,166,0) 64%);"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(58% 55% at 14% 100%,rgba(94,234,212,0.12) 0%,rgba(94,234,212,0) 55%);"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);-webkit-mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0A0A0B 0%,rgba(10,10,11,0) 14%,rgba(10,10,11,0) 58%,#0A0A0B 100%);"></div>
+  </div>
+  <div style="position:relative;z-index:1;">
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:14px;margin-bottom:28px;">
+      <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#0A0A0B;background:#5EEAD4;padding:7px 14px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:#0A0A0B;display:inline-block;animation:pulseDot 2.4s ease-in-out infinite;"></span>Case study: AI Productivity Tool</span>
+      <span style="font-size:12px;letter-spacing:0.16em;text-transform:uppercase;color:#85857C;font-weight:600;">In-house · CentraLogic</span>
+    </div>
+    <h1 data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.8rem,6.5vw,5.6rem);letter-spacing:-0.02em;line-height:1.0;">CentraAssist — an AI workspace to <em style="font-style:italic;color:#5EEAD4;">code, research &amp; collaborate</em></h1>
+    <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;margin:28px 0 0;max-width:58ch;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55;color:#C4C4BC;">An AI-powered workspace for developers and employees to code, research, and collaborate — without switching tools.</p>
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .18s,transform .9s cubic-bezier(.22,.61,.36,1) .18s;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;margin-top:44px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;">
+      <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">My role</div><div style="font-size:15px;font-weight:600;">UX/UI Designer</div></div>
+      <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">Platform</div><div style="font-size:15px;font-weight:600;">Web Application</div></div>
+      <div style="background:#0C0C0D;padding:22px clamp(16px,2vw,26px);"><div style="font-size:11px;letter-spacing:0.16em;text-transform:uppercase;color:#6E6E66;margin-bottom:9px;">Type</div><div style="font-size:15px;font-weight:600;">In-house product</div></div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .24s,transform .9s cubic-bezier(.22,.61,.36,1) .24s;display:flex;flex-wrap:wrap;gap:9px;margin-top:26px;">
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">User Research</span>
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Wireframing</span>
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Interaction Design</span>
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Prototyping</span>
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">UI Design</span>
+      <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Design Handoff</span>
+    </div>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section data-screen-label="Overview" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div style="display:grid;grid-template-columns:0.42fr 0.58fr;gap:clamp(32px,6vw,80px);align-items:start;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Overview</span>
+      <h2 style="margin:18px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-0.01em;line-height:1.08;">What is CentraAssist?</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;">
+      <p style="margin:0;font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:#C4C4BC;">CentraAssist is an internal AI-powered productivity platform built for CentraLogic employees. It gives teams a single workspace to ask AI questions, write and run code, preview web builds, and collaborate on shared projects — removing constant context-switching between separate tools.</p>
+      <p style="margin:20px 0 0;font-size:clamp(1rem,1.25vw,1.1rem);line-height:1.65;color:#9C9C94;">Employees assigned to a project get shared access to its codebase and repository, enabling real-time collaboration without duplicating environments.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:28px;">
+        <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">AI Chat Interface</span>
+        <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Code Editor</span>
+        <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Team Collaboration</span>
+        <span style="font-size:12px;color:#9DE9DD;border:1px solid rgba(94,234,212,0.32);padding:7px 14px;border-radius:100px;">Productivity Tool</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE PROBLEM -->
+<section data-screen-label="Problem" style="background:#0C0C0D;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);max-width:680px;margin-bottom:clamp(40px,6vh,64px);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">The problem</span>
+      <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;line-height:1.04;">Fragmented tools, broken focus</h2>
+      <p style="margin:20px 0 0;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:#9C9C94;">CentraLogic teams relied on a patchwork of disconnected tools — separate apps for AI assistance, coding, file access, and planning. This created three core friction points:</p>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);">
+      <div style="background:linear-gradient(160deg,rgba(94,234,212,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(94,234,212,0.5);box-shadow:0 26px 60px rgba(20,184,166,0.2),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(94,234,212,0.5);line-height:1;margin-bottom:14px;">01</div><div style="font-size:1.15rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Context switching overload</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Developers moved between an AI chat, their IDE, and a file browser constantly, losing thread and momentum with every switch.</p></div>
+      <div style="background:linear-gradient(160deg,rgba(94,234,212,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(94,234,212,0.5);box-shadow:0 26px 60px rgba(20,184,166,0.2),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(94,234,212,0.5);line-height:1;margin-bottom:14px;">02</div><div style="font-size:1.15rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">No shared project intelligence</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">AI conversations and code existed in personal silos. When multiple employees worked on the same project, there was no way to share context or work in tandem.</p></div>
+      <div style="background:linear-gradient(160deg,rgba(94,234,212,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(94,234,212,0.5);box-shadow:0 26px 60px rgba(20,184,166,0.2),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(94,234,212,0.5);line-height:1;margin-bottom:14px;">03</div><div style="font-size:1.15rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Generic tools, specific needs</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Off-the-shelf AI tools had no understanding of internal workflows — no code assistant mode, no QA helper, no story planner tuned for how the team actually worked.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- USER JOURNEY -->
+<section data-screen-label="User journey" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);max-width:680px;">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">User journey</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;line-height:1.04;">How a typical session flows</h2>
+  </div>
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .1s,transform .9s cubic-bezier(.22,.61,.36,1) .1s;display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(8px,1.5vw,20px);margin-top:clamp(44px,7vh,72px);position:relative;">
+    <div style="position:absolute;top:28px;left:10%;right:10%;height:1px;background:rgba(94,234,212,0.25);z-index:0;"></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;"><span style="width:56px;height:56px;border-radius:50%;background:#14B8A6;color:#0A0A0B;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;box-shadow:0 0 0 6px rgba(20,184,166,0.12);">1</span><div style="margin-top:18px;font-size:14px;font-weight:700;">Log in</div><div style="margin-top:7px;font-size:14px;color:#85857C;line-height:1.45;">with company email</div></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;"><span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(94,234,212,0.4);color:#5EEAD4;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;">2</span><div style="margin-top:18px;font-size:14px;font-weight:700;">AI home screen</div><div style="margin-top:7px;font-size:14px;color:#85857C;line-height:1.45;">personalised landing</div></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;"><span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(94,234,212,0.4);color:#5EEAD4;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;">3</span><div style="margin-top:18px;font-size:14px;font-weight:700;">Type or quick action</div><div style="margin-top:7px;font-size:14px;color:#85857C;line-height:1.45;">prompt or chip</div></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;"><span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(94,234,212,0.4);color:#5EEAD4;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;">4</span><div style="margin-top:18px;font-size:14px;font-weight:700;">Build / review code</div><div style="margin-top:7px;font-size:14px;color:#85857C;line-height:1.45;">inline editor</div></div>
+    <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;text-align:center;"><span style="width:56px;height:56px;border-radius:50%;background:#0E0E10;border:1px solid rgba(94,234,212,0.4);color:#5EEAD4;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800;">5</span><div style="margin-top:18px;font-size:14px;font-weight:700;">Preview &amp; share</div><div style="margin-top:7px;font-size:14px;color:#85857C;line-height:1.45;">with the team</div></div>
+  </div>
+</section>
+
+<!-- KEY SCREENS INTRO -->
+<section style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,48px) clamp(20px,3vh,40px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);border-top:1px solid rgba(255,255,255,0.1);padding-top:clamp(40px,6vh,64px);">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Key screens</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.4rem,5.5vw,4rem);letter-spacing:-0.01em;line-height:1.02;">The interface, screen by screen</h2>
+  </div>
+</section>
+
+<!-- SCREEN: Login & home -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Login &amp; home</h3>
+    <p style="margin:14px 0 clamp(32px,5vh,48px);max-width:72ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">The login screen keeps authentication minimal — email-only entry reduces friction for internal users. The home screen greets the user by name with a natural-language prompt input. Quick-action chips (Check-In / Check-Out) surface the most common daily workflows with zero typing required.</p>
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(20px,3vh,32px);">
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-login.png" alt="Login — email-first" style="width:100%;height:auto;display:block;"></div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-home.png" alt="Home — personalised greeting + quick actions" style="width:100%;height:auto;display:block;"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr;gap:6px;margin-top:14px;">
+      <div style="font-size:13px;color:#85857C;padding-left:4px;">Login — email-first, minimal friction</div>
+      <div style="font-size:13px;color:#85857C;padding-left:4px;">Home — personalised greeting + quick actions</div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN: Main chat workspace -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(48px,7vh,80px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Main chat workspace</h3>
+    <p style="margin:14px 0 clamp(32px,5vh,48px);max-width:72ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">The three-column layout is the core interaction model. Left sidebar holds conversation history. The central panel is the active AI conversation — it renders formatted code blocks with copy, edit, and share actions, and tables with an Export button. The right Tools panel offers Code Assistant, Story Planner, Friendly Assistant, and QA Helper as toggleable modes.</p>
+    <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+      <img src="assets/ca-workspace.png" alt="Three-column workspace" style="width:100%;height:auto;display:block;">
+    </div>
+    <div style="font-size:13px;color:#85857C;margin-top:14px;padding-left:4px;">Three-column workspace: sidebar history · AI chat with code block · tools panel</div>
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(20px,3vh,32px);margin-top:clamp(20px,3vh,32px);">
+      <div><div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-table.png" alt="AI-generated table with Export" style="width:100%;height:auto;display:block;"></div><div style="font-size:13px;color:#85857C;margin-top:12px;padding-left:4px;">AI-generated table with Export action — structured data stays usable, not just readable</div></div>
+      <div><div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-code-editor.png" alt="Code editor — expanded mode" style="width:100%;height:auto;display:block;"></div><div style="font-size:13px;color:#85857C;margin-top:12px;padding-left:4px;">Code editor — expanded mode</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCREEN: Code editor -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(48px,7vh,80px);">
+  <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+    <h3 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Code editor &amp; preview</h3>
+    <p style="margin:14px 0 clamp(32px,5vh,48px);max-width:72ch;font-size:clamp(1rem,1.2vw,1.08rem);line-height:1.6;color:#9C9C94;">Expanding a code block opens a full split-panel editor. The left half shows editable code with line numbers; the right half keeps the conversation visible so context is never lost. A Run button executes inline, and a Preview tab renders web output — all without leaving the tool.</p>
+    <div style="display:grid;grid-template-columns:1fr;gap:clamp(20px,3vh,32px);">
+      <div><div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-code-editor.png" alt="Code panel + active chat" style="width:100%;height:auto;display:block;"></div><div style="font-size:13px;color:#85857C;margin-top:12px;padding-left:4px;">Code panel alongside active chat conversation</div></div>
+      <div><div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-preview.png" alt="Preview tab — live web output" style="width:100%;height:auto;display:block;"></div><div style="font-size:13px;color:#85857C;margin-top:12px;padding-left:4px;">Preview tab — live web output rendered next to chat</div></div>
+    </div>
+    <div style="margin-top:clamp(20px,3vh,32px);"><div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(94,234,212,0.22);box-shadow:0 30px 70px rgba(0,0,0,0.45);background:#0E0E10;"><img src="assets/ca-file-explorer.png" alt="File explorer panel" style="width:100%;height:auto;display:block;"></div><div style="font-size:13px;color:#85857C;margin-top:12px;padding-left:4px;">File explorer panel — browse full project repository assigned to the user</div></div>
+  </div>
+</section>
+
+<!-- FEATURE DESIGN -->
+<section data-screen-label="Features" style="background:#0C0C0D;border-top:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);text-align:center;margin-bottom:clamp(40px,6vh,64px);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Feature design</span>
+      <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;">Core capabilities designed</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);">
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">◈</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">AI chat with context memory</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Persistent conversation history in sidebar. Users search past chats and resume threads without re-explaining context.</p></div>
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">⟨⟩</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Inline code editor + preview</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Code blocks expand into a full editor. Run and Preview tabs let users test output without switching to an IDE.</p></div>
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">🗂</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Project file explorer</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Team members browse the full project repository and file tree directly within the editor panel.</p></div>
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">⇄</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Switchable AI tools</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Code Assistant, Story Planner, Friendly Assistant, and QA Helper are toggleable modes — each tuning the AI for a specific task.</p></div>
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">⧉</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Shared project access</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">Multiple employees share one project workspace with full file access — no duplication, no friction.</p></div>
+      <div style="background:#0E0E10;border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(24px,2.6vw,34px);"><div style="font-size:20px;margin-bottom:16px;color:#5EEAD4;">▦</div><div style="font-size:1.1rem;font-weight:700;margin-bottom:10px;letter-spacing:-0.01em;">Structured data rendering</div><p style="margin:0;font-size:0.95rem;line-height:1.6;color:#9C9C94;">AI responses containing tables render as data grids with an Export option — not just plain text.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- DESIGN DECISIONS -->
+<section data-screen-label="Design decisions" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);max-width:680px;margin-bottom:clamp(40px,6vh,64px);">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Design decisions</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;line-height:1.04;">Why it is designed the way it is</h2>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:0;">
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding:clamp(24px,3vh,34px) 0;border-top:1px solid rgba(255,255,255,0.1);"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.6rem);color:rgba(94,234,212,0.5);line-height:0.9;">1</span><div><h3 style="margin:0;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:700;letter-spacing:-0.01em;">Three-column layout rather than full-screen chat</h3><p style="margin:12px 0 0;font-size:clamp(0.96rem,1.2vw,1.05rem);line-height:1.6;color:#9C9C94;max-width:74ch;">Most AI tools hide context the moment you act on a response. Keeping history, conversation, and tools all visible matches how developers actually work: referencing past output while building something new.</p></div></div>
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,.61,.36,1) .05s,transform .8s cubic-bezier(.22,.61,.36,1) .05s;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding:clamp(24px,3vh,34px) 0;border-top:1px solid rgba(255,255,255,0.1);"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.6rem);color:rgba(94,234,212,0.5);line-height:0.9;">2</span><div><h3 style="margin:0;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:700;letter-spacing:-0.01em;">Code editor as an expansion of the chat, not a separate tab</h3><p style="margin:12px 0 0;font-size:clamp(0.96rem,1.2vw,1.05rem);line-height:1.6;color:#9C9C94;max-width:74ch;">Opening a code panel does not navigate away from the conversation. The split view preserves AI context on the right while the user edits on the left — closing the loop between suggestion and execution.</p></div></div>
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,.61,.36,1) .1s,transform .8s cubic-bezier(.22,.61,.36,1) .1s;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding:clamp(24px,3vh,34px) 0;border-top:1px solid rgba(255,255,255,0.1);"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.6rem);color:rgba(94,234,212,0.5);line-height:0.9;">3</span><div><h3 style="margin:0;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:700;letter-spacing:-0.01em;">Quick actions as first-class UI elements on the home screen</h3><p style="margin:12px 0 0;font-size:clamp(0.96rem,1.2vw,1.05rem);line-height:1.6;color:#9C9C94;max-width:74ch;">Check-In and Check-Out are the highest-frequency daily actions. Surfacing them as chips above the prompt means zero typing for the most repeated task — saving real time across hundreds of daily uses.</p></div></div>
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,.61,.36,1) .15s,transform .8s cubic-bezier(.22,.61,.36,1) .15s;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding:clamp(24px,3vh,34px) 0;border-top:1px solid rgba(255,255,255,0.1);"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.6rem);color:rgba(94,234,212,0.5);line-height:0.9;">4</span><div><h3 style="margin:0;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:700;letter-spacing:-0.01em;">Tools panel uses toggles, not separate pages</h3><p style="margin:12px 0 0;font-size:clamp(0.96rem,1.2vw,1.05rem);line-height:1.6;color:#9C9C94;max-width:74ch;">Tools are switched on/off inline rather than via navigation. This keeps the user in one workspace and signals that these are modifiers to AI behaviour, not separate products.</p></div></div>
+    <div data-reveal style="opacity:0;transform:translateY(20px);transition:opacity .8s cubic-bezier(.22,.61,.36,1) .2s,transform .8s cubic-bezier(.22,.61,.36,1) .2s;display:grid;grid-template-columns:auto 1fr;gap:clamp(20px,4vw,48px);padding:clamp(24px,3vh,34px) 0;border-top:1px solid rgba(255,255,255,0.1);border-bottom:1px solid rgba(255,255,255,0.1);"><span style="font-family:'Instrument Serif',serif;font-size:clamp(2rem,3vw,2.6rem);color:rgba(94,234,212,0.5);line-height:0.9;">5</span><div><h3 style="margin:0;font-size:clamp(1.15rem,1.8vw,1.45rem);font-weight:700;letter-spacing:-0.01em;">Login flow is email-only by design</h3><p style="margin:12px 0 0;font-size:clamp(0.96rem,1.2vw,1.05rem);line-height:1.6;color:#9C9C94;max-width:74ch;">Internal users authenticate via company email. Removing a password field reduces cognitive friction and sets the right expectation — this is a company tool, not a consumer product.</p></div></div>
+  </div>
+</section>
+
+<!-- OUTCOMES -->
+<section data-screen-label="Outcomes" style="background:#070708;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Outcomes</span>
+      <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;">Impact of the design</h2>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,24px);margin-top:clamp(40px,6vh,64px);">
+      <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,44px);"><div style="font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-0.03em;color:#5EEAD4;line-height:1;">3+</div><p style="margin:16px 0 0;font-size:0.98rem;line-height:1.55;color:#9C9C94;">Separate tools replaced by one unified workspace</p></div>
+      <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,44px);"><div style="font-weight:800;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-0.03em;color:#5EEAD4;line-height:1;">4</div><p style="margin:16px 0 0;font-size:0.98rem;line-height:1.55;color:#9C9C94;">Specialist AI tool modes in one interface</p></div>
+      <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,44px);"><div style="font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,5vw,4rem);letter-spacing:-0.02em;color:#5EEAD4;line-height:1;">∞</div><p style="margin:16px 0 0;font-size:0.98rem;line-height:1.55;color:#9C9C94;">Team members share one project workspace</p></div>
+    </div>
+    <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .14s,transform .9s cubic-bezier(.22,.61,.36,1) .14s;margin:clamp(32px,5vh,48px) 0 0;max-width:78ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.65;color:#C4C4BC;">The design reduced the number of tools employees needed to switch between during a typical session. By embedding AI assistance, code editing, file browsing, and output preview into a single coherent interface, CentraAssist created a workflow loop that did not require leaving the product.</p>
+  </div>
+</section>
+
+<!-- REFLECTION -->
+<section data-screen-label="Reflection" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);max-width:680px;margin-bottom:clamp(36px,5vh,56px);">
+    <span style="font-size:12px;letter-spacing:0.22em;text-transform:uppercase;color:#5EEAD4;font-weight:700;">Reflection</span>
+    <h2 style="margin:16px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.4rem);letter-spacing:-0.01em;">What I learnt</h2>
+  </div>
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.5vw,28px);">
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(26px,3vw,38px);"><h3 style="margin:0;font-size:1.15rem;font-weight:700;color:#5EEAD4;letter-spacing:-0.01em;">Designing for power users requires density, not simplicity</h3><p style="margin:12px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The three-column layout might seem complex at first, but developers need information density. The lesson: simple for an expert often looks different from simple for a casual user.</p></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(26px,3vw,38px);"><h3 style="margin:0;font-size:1.15rem;font-weight:700;color:#5EEAD4;letter-spacing:-0.01em;">Context preservation is an underrated UX principle</h3><p style="margin:12px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The biggest friction in AI tools is not the AI — it is losing your thread when you act on a response. The split-panel editor keeping conversation visible solved a real observed pain.</p></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(26px,3vw,38px);"><h3 style="margin:0;font-size:1.15rem;font-weight:700;color:#5EEAD4;letter-spacing:-0.01em;">Internal tools deserve the same design rigour</h3><p style="margin:12px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">With in-house products, the temptation is to ship good enough. CentraAssist reinforced that colleagues notice every friction point too — the quality bar should be equally high.</p></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(26px,3vw,38px);"><h3 style="margin:0;font-size:1.15rem;font-weight:700;color:#5EEAD4;letter-spacing:-0.01em;">Mode-switching via toggles vs. navigation is a meaningful choice</h3><p style="margin:12px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Making tools toggleable rather than routable kept users in one mental model of the product — a small decision with a large effect on how unified the experience felt.</p></div>
+  </div>
+</section>
+
+<!-- CLOSING -->
+<section style="border-top:1px solid rgba(255,255,255,0.07);background:linear-gradient(160deg,rgba(20,184,166,0.16),rgba(20,184,166,0.03));">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,5vw,48px);text-align:center;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);">
+      <span style="display:block;width:54px;height:1px;background:rgba(94,234,212,0.6);margin:0 auto 32px;"></span>
+      <p style="margin:0;font-family:'Archivo',sans-serif;font-weight:600;font-size:clamp(1.6rem,3.4vw,2.6rem);line-height:1.35;letter-spacing:-0.02em;color:#EDEBE5;">The best tools don't ask for attention — they just let you get the work done.</p>
+      <div style="margin-top:36px;font-size:1.15rem;font-weight:700;">Prasanna Vispute</div>
+      <div style="margin-top:5px;font-size:13px;letter-spacing:0.04em;color:#5EEAD4;">UX/UI Designer · CentraAssist</div>
+      <a href="Portfolio.dc.html#work" style="display:inline-flex;align-items:center;gap:10px;margin-top:40px;text-decoration:none;color:#0A0A0B;background:#5EEAD4;font-size:15px;font-weight:600;padding:14px 28px;border-radius:100px;transition:opacity .25s ease,transform .25s ease;" style-hover="opacity:0.88;transform:translateY(-2px);"><span style="font-size:17px;">←</span> Back to all work</a>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    this._nav = document.getElementById('siteNav');
+    this._ticking = false;
+    this._onScroll = () => {
+      if (!this._ticking) {
+        requestAnimationFrame(() => { this.handleScroll(); this._ticking = false; });
+        this._ticking = true;
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    this.handleScroll();
+    this._t1 = setTimeout(() => this.handleScroll(), 120);
+    this._t2 = setTimeout(() => this.handleScroll(), 500);
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    clearTimeout(this._t1); clearTimeout(this._t2);
+  }
+  scrollTop() {
+    return window.scrollY || window.pageYOffset ||
+      (document.scrollingElement ? document.scrollingElement.scrollTop : 0) || 0;
+  }
+  handleScroll() {
+    const y = this.scrollTop();
+    const vh = window.innerHeight || 800;
+    if (this._nav) {
+      if (y > 60) {
+        this._nav.style.background = 'rgba(10,10,11,0.92)';
+        this._nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+      } else {
+        this._nav.style.background = 'transparent';
+        this._nav.style.borderBottomColor = 'transparent';
+      }
+    }
+    if (this._reveals && this._reveals.length) {
+      const trigger = vh * 0.92;
+      const still = [];
+      for (const el of this._reveals) {
+        if (el.getBoundingClientRect().top < trigger) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        } else still.push(el);
+      }
+      this._reveals = still;
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>

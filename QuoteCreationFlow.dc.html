@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;scroll-padding-top:84px;}
+  body{margin:0;background:#0A0A0B;color:#EDEBE5;font-family:'Archivo',sans-serif;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+  ::selection{background:#A78BFA;color:#0A0A0B;}
+  @keyframes pulseDot{0%,100%{opacity:1;transform:scale(1);}50%{opacity:.3;transform:scale(.7);}}
+</style>
+</helmet>
+
+<div style="position:fixed;inset:0;z-index:9998;pointer-events:none;opacity:0.05;mix-blend-mode:overlay;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E&quot;);"></div>
+
+<!-- NAV -->
+<nav id="siteNav" style="position:fixed;top:0;left:0;width:100%;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px clamp(20px,5vw,64px);background:transparent;border-bottom:1px solid transparent;transition:background .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease;">
+  <a href="Portfolio.dc.html" style="text-decoration:none;color:#EDEBE5;display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:600;" style-hover="opacity:0.8;"><span style="font-size:17px;">←</span> Back to portfolio</a>
+  <a href="Portfolio.dc.html#work" style="text-decoration:none;color:#9A9A92;font-size:13px;letter-spacing:0.04em;font-weight:500;" style-hover="color:#EDEBE5;">All work</a>
+</nav>
+
+<!-- COVER BANNER -->
+<section data-screen-label="Cover" style="padding:clamp(96px,13vh,150px) clamp(16px,4vw,56px) clamp(28px,5vh,56px);">
+  <div style="max-width:1240px;margin:0 auto;border-radius:clamp(14px,1.6vw,20px);overflow:hidden;border:1px solid rgba(167,139,250,0.18);aspect-ratio:16/4.5;"><img src="assets/qc-cover.png" alt="Quote Creation Flow cover" style="width:100%;height:100%;object-fit:cover;object-position:center;display:block;"></div>
+</section>
+
+<!-- HERO -->
+<header data-screen-label="Case study hero" style="position:relative;max-width:1180px;margin:0 auto;padding:clamp(28px,5vh,60px) clamp(20px,5vw,48px) clamp(40px,6vh,72px);">
+  <div aria-hidden="true" style="position:absolute;top:0;left:calc(-50vw + 50%);width:100vw;height:100%;overflow:hidden;z-index:0;pointer-events:none;">
+    <div style="position:absolute;inset:0;background:radial-gradient(125% 100% at 78% 28%,rgba(139,92,246,0.40) 0%,rgba(109,40,217,0.16) 36%,rgba(109,40,217,0) 64%);"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(58% 55% at 14% 100%,rgba(167,139,250,0.14) 0%,rgba(167,139,250,0) 55%);"></div>
+    <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.05) 1px,transparent 1px);background-size:54px 54px;mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);-webkit-mask-image:radial-gradient(82% 80% at 72% 38%,#000 0%,transparent 74%);"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0A0A0B 0%,rgba(10,10,11,0) 14%,rgba(10,10,11,0) 58%,#0A0A0B 100%);"></div>
+  </div>
+  <div style="position:relative;z-index:1;">
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.22,.61,.36,1),transform .8s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:14px;margin-bottom:28px;">
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:#fff;background:#6D28D9;padding:7px 14px;border-radius:100px;"><span style="width:6px;height:6px;border-radius:50%;background:#fff;display:inline-block;animation:pulseDot 2.4s ease-in-out infinite;"></span>Case study: Utility SaaS</span>
+      </div>
+      <h1 data-reveal style="opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.6rem,6vw,5.2rem);letter-spacing:-0.02em;line-height:1.0;">Redesigning Quote Creation Flow for a <em style="font-style:italic;color:#A78BFA;">Utility CRM</em></h1>
+      <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;margin:28px 0 0;max-width:46ch;font-size:clamp(1.05rem,1.4vw,1.25rem);line-height:1.55;color:#C4C4BC;">Simplifying complex electricity &amp; gas quoting workflows into a structured experience.</p>
+      <div data-reveal style="opacity:0;transform:translateY(22px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .18s,transform .9s cubic-bezier(.22,.61,.36,1) .18s;display:grid;grid-template-columns:1fr 1fr;gap:26px 24px;margin-top:40px;padding-top:28px;border-top:1px solid rgba(255,255,255,0.1);">
+        <div><div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6E6E66;margin-bottom:8px;">Role</div><div style="font-size:15px;font-weight:600;">UI/UX Designer</div></div>
+        <div><div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6E6E66;margin-bottom:8px;">Industry</div><div style="font-size:15px;font-weight:600;">Utility (Electricity &amp; Gas)</div></div>
+        <div><div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6E6E66;margin-bottom:8px;">Scope</div><div style="font-size:15px;font-weight:600;">Quote Creation Flow</div></div>
+        <div><div style="font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:#6E6E66;margin-bottom:8px;">Tools</div><div style="font-size:15px;font-weight:600;">Figma</div></div>
+      </div>
+  </div>
+</header>
+
+<!-- THE PROBLEM -->
+<section data-screen-label="Problem" style="background:#0C0C0D;border-top:1px solid rgba(255,255,255,0.07);border-bottom:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:14px;margin-bottom:clamp(36px,5vh,56px);">
+      <span style="width:28px;height:3px;border-radius:2px;background:#6D28D9;"></span>
+      <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-0.01em;">The Problem</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:0.46fr 0.54fr;gap:clamp(32px,6vw,72px);align-items:start;">
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;">
+        <p style="margin:0;font-size:clamp(1.05rem,1.4vw,1.2rem);line-height:1.65;color:#C4C4BC;">In most utility CRM systems, quote creation is fragmented and unstructured. Sales teams are forced to jump between disparate tools and manual entry points.</p>
+        <div style="margin-top:30px;font-size:13px;letter-spacing:0.04em;color:#85857C;font-weight:600;">Sales teams current struggles:</div>
+        <ul style="list-style:none;margin:16px 0 0;padding:0;display:flex;flex-direction:column;gap:13px;">
+          <li style="display:flex;gap:12px;align-items:center;font-size:1rem;color:#C4C4BC;"><span style="flex:none;width:18px;height:18px;border-radius:50%;background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.5);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:11px;">!</span>Create quotes without structured customer data</li>
+        <li style="display:flex;gap:12px;align-items:center;font-size:1rem;color:#C4C4BC;"><span style="flex:none;width:18px;height:18px;border-radius:50%;background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.5);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:11px;">!</span>Use external tools to send quotes</li>
+          <li style="display:flex;gap:12px;align-items:center;font-size:1rem;color:#C4C4BC;"><span style="flex:none;width:18px;height:18px;border-radius:50%;background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.5);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:11px;">!</span>Create accounts after approval</li>
+          <li style="display:flex;gap:12px;align-items:center;font-size:1rem;color:#C4C4BC;"><span style="flex:none;width:18px;height:18px;border-radius:50%;background:rgba(167,139,250,0.16);border:1px solid rgba(167,139,250,0.5);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:11px;">!</span>Manually link data across systems</li>
+        </ul>
+      </div>
+      <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+        <div style="background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:24px;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 24px 56px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-size:18px;margin-bottom:14px;color:#A78BFA;">⊟</div><div style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">Disconnected Quote Creation</div><p style="margin:0;font-size:0.92rem;line-height:1.55;color:#9C9C94;">Quotes are created separately without customer accounts</p></div>
+        <div style="background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:24px;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 24px 56px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-size:18px;margin-bottom:14px;color:#A78BFA;">⚠</div><div style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">Incorrect Details</div><p style="margin:0;font-size:0.92rem;line-height:1.55;color:#9C9C94;">High risk of error in meter and consumption info.</p></div>
+        <div style="background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:24px;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 24px 56px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-size:18px;margin-bottom:14px;color:#A78BFA;">◷</div><div style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">Onboarding Delays</div><p style="margin:0;font-size:0.92rem;line-height:1.55;color:#9C9C94;">Fragmented data slows down the final approval.</p></div>
+        <div style="background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:16px;padding:24px;transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 24px 56px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-size:18px;margin-bottom:14px;color:#A78BFA;">⇄</div><div style="font-size:1.05rem;font-weight:700;margin-bottom:8px;">Manual Data Linking</div><p style="margin:0;font-size:0.92rem;line-height:1.55;color:#9C9C94;">Quotes and accounts are linked later, increasing errors</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- THE OBJECTIVE -->
+<section data-screen-label="Objective" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:14px;margin-bottom:clamp(36px,5vh,56px);">
+    <span style="width:28px;height:3px;border-radius:2px;background:#6D28D9;"></span>
+    <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-0.01em;">The Objective</h2>
+  </div>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,72px);align-items:center;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;display:flex;flex-direction:column;gap:12px;">
+      <div style="display:flex;gap:16px;align-items:center;background:#0E0E10;border-left:2px solid #6D28D9;border-radius:0 12px 12px 0;padding:18px 22px;"><span style="font-weight:800;color:#A78BFA;font-size:0.95rem;">01</span><span style="font-size:1rem;color:#D8D8D0;">Combine customer, account, and quote creation</span></div>
+      <div style="display:flex;gap:16px;align-items:center;background:#0E0E10;border-left:2px solid #6D28D9;border-radius:0 12px 12px 0;padding:18px 22px;"><span style="font-weight:800;color:#A78BFA;font-size:0.95rem;">02</span><span style="font-size:1rem;color:#D8D8D0;">Reduce manual entry steps significantly</span></div>
+      <div style="display:flex;gap:16px;align-items:center;background:#0E0E10;border-left:2px solid #6D28D9;border-radius:0 12px 12px 0;padding:18px 22px;"><span style="font-weight:800;color:#A78BFA;font-size:0.95rem;">03</span><span style="font-size:1rem;color:#D8D8D0;">Support workflows with incomplete data scenarios</span></div>
+      <div style="display:flex;gap:16px;align-items:center;background:#0E0E10;border-left:2px solid #6D28D9;border-radius:0 12px 12px 0;padding:18px 22px;"><span style="font-weight:800;color:#A78BFA;font-size:0.95rem;">04</span><span style="font-size:1rem;color:#D8D8D0;">Improve overall sales efficiency</span></div>
+    </div>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;background:linear-gradient(155deg,#6D28D9,#4c1d95);border-radius:22px;padding:clamp(28px,4vw,44px);box-shadow:0 30px 70px rgba(109,40,217,0.3);">
+      <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.7);font-weight:700;">Key insight</div>
+      <h3 style="margin:18px 0 0;font-weight:800;font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-0.02em;line-height:1.12;color:#fff;">Quote creation wasn't complex, it was unstructured.</h3>
+      <p style="margin:20px 0 0;font-size:clamp(0.98rem,1.2vw,1.08rem);line-height:1.65;color:rgba(255,255,255,0.85);">Sales agents were expected to complete a long, continuous form without clear segmentation or guidance. This created cognitive overload, increased the chances of errors, and made the quote creation process feel slower and more difficult than it actually was.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BIG QUOTE -->
+<section style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(56px,9vh,100px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:clamp(40px,7vw,88px) clamp(24px,5vw,64px);text-align:center;">
+    <p style="margin:0;font-family:'Instrument Serif',serif;font-size:clamp(1.7rem,4vw,3rem);line-height:1.2;letter-spacing:-0.01em;color:#EDEBE5;">"The problem wasn't too many fields, it was lack of <em style="font-style:italic;color:#A78BFA;">structure</em> and <em style="font-style:italic;color:#A78BFA;">decision guidance</em>."</p>
+  </div>
+</section>
+
+<!-- DESIGN PILLARS -->
+<section data-screen-label="Design pillars" style="max-width:1180px;margin:0 auto;padding:clamp(40px,6vh,72px) clamp(20px,5vw,48px) clamp(56px,9vh,100px);">
+  <h2 data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);margin:0 0 clamp(36px,5vh,56px);text-align:center;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2rem,4.5vw,3.2rem);letter-spacing:-0.01em;">Design Pillars</h2>
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .08s,transform .9s cubic-bezier(.22,.61,.36,1) .08s;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,2vw,24px);">
+    <div class="pillar" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(22px,2.2vw,30px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 26px 60px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(167,139,250,0.45);line-height:1;margin-bottom:14px;">01</div><div style="font-size:1.1rem;font-weight:700;color:#A78BFA;margin-bottom:14px;letter-spacing:-0.01em;">Structured, Step-Based Flow</div><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#9C9C94;">Breaking the quote process into clear steps allowed users to focus on one set of inputs at a time, instead of navigating a long, unstructured form.</p></div>
+    <div class="pillar" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(22px,2.2vw,30px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 26px 60px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(167,139,250,0.45);line-height:1;margin-bottom:14px;">02</div><div style="font-size:1.1rem;font-weight:700;color:#A78BFA;margin-bottom:14px;letter-spacing:-0.01em;">Controlled Information Visibility</div><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#9C9C94;">Only relevant fields are shown based on user inputs, reducing unnecessary complexity and keeping the interface focused.</p></div>
+    <div class="pillar" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(22px,2.2vw,30px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 26px 60px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(167,139,250,0.45);line-height:1;margin-bottom:14px;">03</div><div style="font-size:1.1rem;font-weight:700;color:#A78BFA;margin-bottom:14px;letter-spacing:-0.01em;">Guided Progression</div><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#9C9C94;">The flow provides clear direction on what to complete next, minimizing guesswork and reducing dependency on user memory.</p></div>
+    <div class="pillar" style="position:relative;overflow:hidden;background:linear-gradient(160deg,rgba(167,139,250,0.10),rgba(255,255,255,0.02));border:1px solid rgba(255,255,255,0.09);border-radius:18px;padding:clamp(22px,2.2vw,30px);transition:transform .4s cubic-bezier(.22,.61,.36,1),border-color .4s ease,box-shadow .4s ease;" style-hover="transform:translateY(-7px);border-color:rgba(167,139,250,0.5);box-shadow:0 26px 60px rgba(109,40,217,0.22),inset 0 1px 0 rgba(255,255,255,0.08);"><div style="font-family:'Instrument Serif',serif;font-size:1.7rem;color:rgba(167,139,250,0.45);line-height:1;margin-bottom:14px;">04</div><div style="font-size:1.1rem;font-weight:700;color:#A78BFA;margin-bottom:14px;letter-spacing:-0.01em;">Reduced Input Repetition</div><p style="margin:0;font-size:0.92rem;line-height:1.6;color:#9C9C94;">Related fields are grouped logically, and repeated inputs are minimized to avoid redundant effort during the process.</p></div>
+  </div>
+</section>
+
+<!-- THE SOLUTION -->
+<section data-screen-label="Solution" style="background:#0C0C0D;border-top:1px solid rgba(255,255,255,0.07);">
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px) clamp(20px,3vh,40px);text-align:center;">
+    <h2 data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(2.2rem,5vw,3.6rem);letter-spacing:-0.01em;">The Solution</h2>
+    <p data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;margin:16px auto 0;max-width:48ch;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:#9C9C94;">A structured 4-step guided flow designed for speed and flexibility.</p>
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,1.5vw,20px);margin-top:clamp(40px,6vh,64px);position:relative;">
+      <div style="position:absolute;top:28px;left:12%;right:12%;height:1px;background:rgba(167,139,250,0.25);z-index:0;"></div>
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;"><span style="width:56px;height:56px;border-radius:16px;background:#6D28D9;color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;box-shadow:0 0 0 6px rgba(109,40,217,0.12);">👤</span><div style="margin-top:16px;font-size:14px;font-weight:700;">Step 1</div><div style="margin-top:5px;font-size:12px;color:#85857C;">Customer Info</div></div>
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;"><span style="width:56px;height:56px;border-radius:16px;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:20px;">⚡</span><div style="margin-top:16px;font-size:14px;font-weight:700;">Step 2</div><div style="margin-top:5px;font-size:12px;color:#85857C;">Property &amp; Meter</div></div>
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;"><span style="width:56px;height:56px;border-radius:16px;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:20px;">🏦</span><div style="margin-top:16px;font-size:14px;font-weight:700;">Step 3</div><div style="margin-top:5px;font-size:12px;color:#85857C;">Payment (Optional)</div></div>
+      <div style="position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;"><span style="width:56px;height:56px;border-radius:16px;background:#0E0E10;border:1px solid rgba(167,139,250,0.4);color:#A78BFA;display:flex;align-items:center;justify-content:center;font-size:20px;">➤</span><div style="margin-top:16px;font-size:14px;font-weight:700;">Step 4</div><div style="margin-top:5px;font-size:12px;color:#85857C;">Review &amp; Share</div></div>
+    </div>
+  </div>
+
+  <!-- STEP 01 -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(48px,7vh,80px) clamp(20px,5vw,48px);">
+    <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A78BFA;font-weight:700;">Step 01</div>
+      <h3 style="margin:10px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Customer Information</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin:24px 0 clamp(32px,5vh,48px);max-width:880px;">
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">Purpose</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Capture basic customer details and determine account type (Residential vs Business) early on.</p></div>
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">UX Decision</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">The system creates the customer account in the background as soon as Step 1 is validated. This eliminates the "Double Entry" problem found in legacy systems.</p></div>
+      </div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+        <img src="assets/qc-step1.png" alt="Customer Information screen" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 02 -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(48px,7vh,80px);">
+    <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A78BFA;font-weight:700;">Step 02</div>
+      <h3 style="margin:10px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Property &amp; Meter</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin:24px 0 clamp(32px,5vh,48px);max-width:880px;">
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">Purpose</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Capture high-stakes utility data like MPAN/MPRN numbers and consumption patterns.</p></div>
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">UX Decision</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Inputs are grouped into logical "pods" based on fuel type. Inline validation checks against central utility databases in real-time to ensure accuracy.</p></div>
+      </div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+        <img src="assets/qc-step2.png" alt="Property &amp; Meter screen" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 03 -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(48px,7vh,80px);">
+    <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A78BFA;font-weight:700;">Step 03</div>
+      <h3 style="margin:10px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Payment (Optional)</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin:24px 0 clamp(32px,5vh,48px);max-width:880px;">
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">Purpose</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Collect bank details</p></div>
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">UX Decision</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Make optional to avoid friction and drop-offs. Sales teams often face friction when asking for bank details too early.</p></div>
+      </div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+        <img src="assets/qc-step3.png" alt="Payment screen" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 04 -->
+  <div style="max-width:1180px;margin:0 auto;padding:clamp(20px,3vh,40px) clamp(20px,5vw,48px) clamp(56px,9vh,100px);">
+    <div data-reveal style="opacity:0;transform:translateY(30px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);">
+      <div style="font-size:12px;letter-spacing:0.18em;text-transform:uppercase;color:#A78BFA;font-weight:700;">Step 04</div>
+      <h3 style="margin:10px 0 0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3vw,2.4rem);letter-spacing:-0.01em;">Review &amp; Share</h3>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(20px,4vw,48px);margin:24px 0 clamp(32px,5vh,48px);max-width:880px;">
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">Purpose</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Compare and send quotes</p></div>
+        <div><div style="font-size:13px;font-weight:700;color:#D8D8D0;margin-bottom:6px;">UX Decision</div><p style="margin:0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Integrate sharing inside CRM. Instead of downloading PDFs, the CRM generates a unique secure link for the customer to review and sign their quote instantly.</p></div>
+      </div>
+      <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(167,139,250,0.22);box-shadow:0 40px 90px rgba(0,0,0,0.5);background:#0E0E10;">
+        <img src="assets/qc-step4.png" alt="Review &amp; Share screen" style="width:100%;height:auto;display:block;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT & LEARNINGS -->
+<section data-screen-label="Impact" style="max-width:1180px;margin:0 auto;padding:clamp(56px,9vh,100px) clamp(20px,5vw,48px);">
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1),transform .9s cubic-bezier(.22,.61,.36,1);display:flex;align-items:center;gap:14px;margin-bottom:clamp(36px,5vh,56px);">
+    <span style="width:28px;height:3px;border-radius:2px;background:#6D28D9;"></span>
+    <h2 style="margin:0;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.9rem,4vw,3rem);letter-spacing:-0.01em;">Impact &amp; Learnings</h2>
+  </div>
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .06s,transform .9s cubic-bezier(.22,.61,.36,1) .06s;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,24px);">
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,40px);text-align:center;"><div style="font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-0.03em;color:#A78BFA;">−40%</div><div style="margin-top:10px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#85857C;font-weight:600;">Manual steps</div></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,40px);text-align:center;"><div style="font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-0.03em;color:#A78BFA;">+25%</div><div style="margin-top:10px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#85857C;font-weight:600;">Data accuracy</div></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,40px);text-align:center;"><div style="font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-0.03em;color:#A78BFA;">3.5x</div><div style="margin-top:10px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#85857C;font-weight:600;">Faster creation</div></div>
+    <div style="background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:18px;padding:clamp(28px,3vw,40px);text-align:center;"><div style="font-weight:800;font-size:clamp(2.2rem,4vw,3.2rem);letter-spacing:-0.03em;color:#A78BFA;">0</div><div style="margin-top:10px;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#85857C;font-weight:600;">Duplicate entries</div></div>
+  </div>
+
+  <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity .9s cubic-bezier(.22,.61,.36,1) .12s,transform .9s cubic-bezier(.22,.61,.36,1) .12s;background:#0C0C0D;border:1px solid rgba(255,255,255,0.08);border-radius:24px;padding:clamp(36px,5vw,64px);margin-top:clamp(24px,4vh,40px);">
+    <h3 style="margin:0 0 clamp(28px,4vh,44px);text-align:center;font-family:'Instrument Serif',serif;font-weight:400;font-size:clamp(1.6rem,3.4vw,2.6rem);letter-spacing:-0.01em;">Key Learnings</h3>
+    <div style="display:flex;flex-direction:column;gap:clamp(24px,3vh,36px);max-width:760px;margin:0 auto;">
+      <div style="display:flex;gap:22px;"><span style="font-weight:800;font-size:1.8rem;color:rgba(167,139,250,0.6);line-height:1;min-width:40px;">01</span><div><h4 style="margin:0;font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;">Structure reduces complexity</h4><p style="margin:9px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Even if the total number of fields remains the same, how you segment them determines perceived effort.</p></div></div>
+      <div style="display:flex;gap:22px;"><span style="font-weight:800;font-size:1.8rem;color:rgba(167,139,250,0.6);line-height:1;min-width:40px;">02</span><div><h4 style="margin:0;font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;">UX should guide, not just display</h4><p style="margin:9px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Internal tools shouldn't just be data containers; they should act as an assistant to the employee.</p></div></div>
+      <div style="display:flex;gap:22px;"><span style="font-weight:800;font-size:1.8rem;color:rgba(167,139,250,0.6);line-height:1;min-width:40px;">03</span><div><h4 style="margin:0;font-size:1.15rem;font-weight:700;letter-spacing:-0.01em;">Internal tools deserve premium UI</h4><p style="margin:9px 0 0;font-size:0.96rem;line-height:1.6;color:#9C9C94;">Improving the aesthetic quality of enterprise tools leads to higher employee satisfaction and lower turnover.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THANK YOU -->
+<section style="border-top:1px solid rgba(255,255,255,0.07);background:linear-gradient(160deg,rgba(109,40,217,0.16),rgba(109,40,217,0.03));">
+  <div style="max-width:980px;margin:0 auto;padding:clamp(64px,11vh,140px) clamp(20px,5vw,48px);text-align:center;">
+    <div data-reveal style="opacity:0;transform:translateY(24px);transition:opacity 1s cubic-bezier(.22,.61,.36,1),transform 1s cubic-bezier(.22,.61,.36,1);">
+      <div style="font-size:34px;color:#EF4444;line-height:1;">♥</div>
+      <div style="margin-top:18px;font-weight:800;font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-0.02em;color:#EF4444;">Thank you</div>
+      <p style="margin:12px 0 0;font-size:clamp(1.2rem,2.4vw,1.8rem);color:#EDEBE5;font-weight:500;">for scrolling 3,000 pixels</p>
+      <div style="margin-top:36px;font-size:1.15rem;font-weight:700;">Prasanna</div>
+      <div style="margin-top:5px;font-size:13px;letter-spacing:0.04em;color:#A78BFA;">Product Designer</div>
+      <a href="Portfolio.dc.html#work" style="display:inline-flex;align-items:center;gap:10px;margin-top:40px;text-decoration:none;color:#fff;background:#6D28D9;font-size:15px;font-weight:600;padding:14px 28px;border-radius:100px;transition:opacity .25s ease,transform .25s ease;" style-hover="opacity:0.88;transform:translateY(-2px);"><span style="font-size:17px;">←</span> Back to all work</a>
+    </div>
+  </div>
+</section>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  componentDidMount() {
+    this._reveals = Array.from(document.querySelectorAll('[data-reveal]'));
+    this._nav = document.getElementById('siteNav');
+    this._ticking = false;
+    this._onScroll = () => {
+      if (!this._ticking) {
+        requestAnimationFrame(() => { this.handleScroll(); this._ticking = false; });
+        this._ticking = true;
+      }
+    };
+    window.addEventListener('scroll', this._onScroll, { passive: true });
+    window.addEventListener('resize', this._onScroll, { passive: true });
+    this.handleScroll();
+    this._t1 = setTimeout(() => this.handleScroll(), 120);
+    this._t2 = setTimeout(() => this.handleScroll(), 500);
+  }
+  componentWillUnmount() {
+    if (this._onScroll) {
+      window.removeEventListener('scroll', this._onScroll);
+      window.removeEventListener('resize', this._onScroll);
+    }
+    clearTimeout(this._t1); clearTimeout(this._t2);
+  }
+  scrollTop() {
+    return window.scrollY || window.pageYOffset ||
+      (document.scrollingElement ? document.scrollingElement.scrollTop : 0) || 0;
+  }
+  handleScroll() {
+    const y = this.scrollTop();
+    const vh = window.innerHeight || 800;
+    if (this._nav) {
+      if (y > 60) {
+        this._nav.style.background = 'rgba(10,10,11,0.92)';
+        this._nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
+      } else {
+        this._nav.style.background = 'transparent';
+        this._nav.style.borderBottomColor = 'transparent';
+      }
+    }
+    if (this._reveals && this._reveals.length) {
+      const trigger = vh * 0.92;
+      const still = [];
+      for (const el of this._reveals) {
+        if (el.getBoundingClientRect().top < trigger) {
+          el.style.opacity = '1';
+          el.style.transform = 'none';
+        } else still.push(el);
+      }
+      this._reveals = still;
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
